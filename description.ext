@@ -1,0 +1,245 @@
+﻿author = "Nikander, edits by Capps(BWRU)";
+briefingName = "Vigilance Beta";
+onLoadMission = "PUBLIC BETA";
+onLoadName = "Vigilance";
+overviewText = "Public Beta Version";
+overviewPicture = "\uns_patches\ui\uns_mod_dlc_ca.paa";
+overviewTextLocked = "";
+
+allowFunctionsLog = 0;  // 1=enable
+enableDebugConsole = 0; // 1=host
+
+respawn = 3;
+respawnDelay = 10;
+respawnVehicleDelay = 120;
+respawnOnStart = -1;
+respawnTemplates[] = {"Revive","MenuPosition"};
+
+corpseManagerMode = 1;
+corpseLimit = 4;
+
+wreckManagerMode = 1;
+wreckLimit = 1;
+
+disabledAI = 1;
+aiKills = 1;
+saving = 0;
+
+class Header
+{
+gameType = Coop;
+minPlayers = 1;
+maxPlayers = 12;
+};
+
+class Params
+{
+	class Daytime
+	{
+		title = "Time";
+		values[] = {16,7,0};
+		texts[] = {"16:00","07:00","24:00"};
+		default = 7;
+	};
+	class Difficulty
+	{
+		title = "Skill";
+		values[] = {6,4,2};
+		texts[] = {"Recruit","Regular","Veteran"};
+		default = 4;
+	};
+
+	class Arsenal
+	{
+		title = "Arsenal";
+		values[] = {0,1};
+		texts[] = {"Unsung","Arma 3"};
+		default = 0;
+	};
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "GAME OVER";
+		subtitle = "Mission failed";
+		description = "Enemy is occupying the district";
+		pictureBackground = "\a3\Ui_f\data\gui\cfg\Debriefing\debriefingbackground_co.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+	class End2
+	{
+		title = "GAME OVER";
+		subtitle = "Mission accomplished";
+		description = "All objectives completed successfully";
+		pictureBackground = "\a3\Ui_f\data\gui\cfg\Debriefing\debriefingbackground_co.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+
+	class UpperHand
+	{
+		name = "Vigilance";
+		sound[] = {"@a3\dubbing_f_heli\mp_groundsupport\20_LowTicketsEnemy\mp_groundsupport_20_lowticketsenemy_BHQ_1.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+
+	class LostSector
+	{
+		name = "Insurgency";
+		sound[] = {"@a3\dubbing_f_heli\mp_groundsupport\35_EnemyCapturedSector\mp_groundsupport_35_enemycapturedsector_BHQ_0.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+
+	class Affirmative
+	{
+		name = "SpecOps";
+		sound[] = {"@a3\dubbing_f_epc\c_m02\102_investigationExplained\c_m02_102_investigationexplained_KER_1.ogg", 0.8, 1};
+		titles[] = {0,"Officer: ""You are already assigned to an operation, read the intel"""};
+	};
+};
+
+class CfgNotifications
+{
+	class Vigilance
+	{
+		title = "INTEL REPORT";
+		iconPicture = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\defend_ca.paa";
+		description = "GRID CLEAR<br /><t color='#ffffff'>OPERATION TIMER BONUS</t>";
+		color[] = {0.3,0.3,0.6,1};
+		sound = "UpperHand";
+		duration = 4;
+		priority = 0;
+	};
+
+	class Insurgency
+	{
+		title = "INTEL REPORT";
+		iconPicture = "a3\ui_f_curator\data\cfgmarkers\kia_ca.paa";
+		description = "LOST GRID<br/><t color='#ffffff'>SECTOR OCCUPIED BY ENEMY</t>";
+		color[] = {1,0,0,1};
+		sound = "LostSector";
+		duration = 4;
+		priority = 0;
+	};
+
+	class EnemyTimer
+	{
+		title = "INTEL REPORT";
+		iconPicture = "\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		description = "<t color='#ef0000'>%1 MINUTES</t><br /><t color='#ffffff'>NEXT ENEMY OFFENSIVE</t>";
+		color[] = {0.8,0.8,0.8,1};
+		sound = "AddItemFailed";
+		duration = 4;
+		priority = 0;
+	};
+
+	class CampLocated
+	{
+		title = "INTEL REPORT";
+		iconPicture = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\defend_ca.paa";
+		description = "<t color='#ffffff'>GRID %1<br />NEW INTEL MARKED ON MAP</t>";
+		color[] = {0.3,0.3,0.6,1};
+		sound = "AddItemFailed";
+		duration = 4;
+		priority = 0;
+	};
+
+	class SpecialOps
+	{
+		title = "SPECIAL OPERATIONS";
+		iconPicture = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
+		description = "<t color='#ffffff'>%1<br />COMPLETED SUCCESSFULLY</t>";
+		color[] = {0.3,0.6,0.3,1};
+		sound = "AddItemFailed";
+		duration = 4;
+		priority = 0;
+	};
+
+	class SpecOpLost
+	{
+		title = "SPECIAL OPERATIONS";
+		iconPicture = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
+		description = "DEFEAT<br /><t color='#ffffff'>TARGET OBJECTIVE LOST</t>";
+		color[] = {1,0,0,1};
+		sound = "AddItemFailed";
+		duration = 4;
+		priority = 0;
+	};
+};
+
+class CfgHints
+{
+	class Vigilance
+	{
+		class Operations
+		{
+			displayName = "Vigilance";
+			displayNameShort = "SPECIAL OPERATIONS";
+			description = "Studies and Observations Group conducts various covert operations%1Details of each new operation are accessible to one person at a time";
+                        tip = "Talk to SOG officers for more details%1Press %3%11%4 for intel updates on estimated time of enemy attack";
+			image = "uns_patches\data\sub\capital_mil_assist_cmd_grn_ca.paa";
+			arguments[] = {
+				{{"Watch"}}
+			};
+		};
+	};
+};
+
+class CfgFunctions
+{
+	class VG
+	{
+		class Client
+		{
+			class intelMgr	{file = "fn_intelmgr.sqf";};
+			class camShake	{file = "fn_camshake.sqf";};
+			class briefing	{file = "fn_briefing.sqf";};
+			class support	{file = "fn_support.sqf";};
+			class npcLife	{file = "fn_npclife.sqf";};
+			class entyMgr	{file = "fn_entymgr.sqf";};
+			class taskMgr	{file = "fn_taskmgr.sqf";};
+			class talkMgr	{file = "fn_talkmgr.sqf";};
+			class loadout	{file = "fn_loadout.sqf";};
+		};
+	};
+};
+
+class CfgRemoteExec
+{
+        class Commands
+        {
+                mode = 1;
+
+                class lock				{allowedTargets = 0;};
+                class stop				{allowedTargets = 0;};
+                class setDir				{allowedTargets = 0;};
+                class switchMove			{allowedTargets = 0;};
+		class selectLeader			{allowedTargets = 0;};
+		class disableCollisionWith		{allowedTargets = 0;};
+        };
+        class Functions
+        {
+                mode = 1;
+
+		class BIS_effectKilledSecondaries	{allowedTargets = 0;};
+		class BIS_fnc_reviveIconControl		{allowedTargets = 0;};
+                class BIS_fnc_showNotification		{allowedTargets = 0;};
+		class BIS_fnc_reviveSetStatus		{allowedTargets = 0;};
+		class BIS_fnc_reviveInit		{allowedTargets = 0;};
+		class BIS_fnc_objectVar			{allowedTargets = 0;};
+		class VG_fnc_camShake			{allowedTargets = 0;};
+		class VG_fnc_intelMgr			{allowedTargets = 0;};
+		class BIS_fnc_execVM			{allowedTargets = 0;};
+		class VG_fnc_talkMgr			{allowedTargets = 0;};
+		class VG_fnc_taskMgr			{allowedTargets = 0;};
+        };
+};
