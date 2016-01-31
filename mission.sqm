@@ -242,7 +242,7 @@ class Mission
 						items=10;
 						class Item0
 						{
-							value="10";
+							value="180";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -601,7 +601,7 @@ class Mission
 						items=10;
 						class Item0
 						{
-							value="10";
+							value="180";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
