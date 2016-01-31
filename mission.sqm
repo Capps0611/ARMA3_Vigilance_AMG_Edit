@@ -72,7 +72,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			side="WEST";
@@ -242,7 +242,7 @@ class Mission
 						items=10;
 						class Item0
 						{
-							value="180";
+							value="10";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -308,7 +308,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=1;
-					synchronizations[]={4,5,6,7,8};
+					synchronizations[]={8,5,6,7};
 				};
 			};
 		};
@@ -587,6 +587,90 @@ class Mission
 				};
 			};
 		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3650.553,118.00197,1182.2748};
+					class args
+					{
+						items=10;
+						class Item0
+						{
+							value="10";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Delay";
+						};
+						class Item1
+						{
+							value="1100";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="DesertedDistance";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnCount";
+						};
+						class Item3
+						{
+							value="clearItemCargoGlobal (_this select 0); clearWeaponCargoGlobal (_this select 0); clearMagazineCargoGlobal (_this select 0);(_this select 0) execVM ""fn_transHeli_texture.sqf""";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Init";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Position";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="PositionType";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Wreck";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ShowNotification";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ForcedRespawn";
+						};
+						class Item9
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnWhenDisabled";
+						};
+					};
+					id=20;
+					side="LOGIC";
+					vehicle="ModuleRespawnVehicle_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={9};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -595,12 +679,12 @@ class Mission
 		{
 			position[]={3709.2258,118.95894,1264.2067};
 			azimut=170;
-			id=20;
+			id=21;
 			side="EMPTY";
 			vehicle="uns_willys";
 			leader=1;
 			skill=0.5;
-			syncId=4;
+			syncId=5;
 			synchronizations[]={1};
 		};
 		class Item1
@@ -608,7 +692,7 @@ class Mission
 			presenceCondition="paramsArray select 2 == 0";
 			position[]={3697.5989,118.15796,1208.4386};
 			azimut=25;
-			id=21;
+			id=22;
 			side="EMPTY";
 			vehicle="ABoxes";
 			leader=1;
@@ -620,7 +704,7 @@ class Mission
 		{
 			position[]={3687.5137,118.23868,1229.6606};
 			azimut=130;
-			id=22;
+			id=23;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			leader=1;
@@ -630,57 +714,58 @@ class Mission
 		{
 			position[]={3697.9751,118.86518,1269.6345};
 			azimut=300;
-			id=23;
+			id=24;
 			side="EMPTY";
 			vehicle="uns_willys";
 			leader=1;
 			skill=0.5;
-			syncId=5;
+			syncId=6;
 			synchronizations[]={1};
 		};
 		class Item4
 		{
 			position[]={3307.8503,0.0076771565,1398.0377};
 			azimut=40;
-			id=24;
+			id=25;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
-			syncId=6;
+			syncId=7;
 			synchronizations[]={1};
 		};
 		class Item5
 		{
 			position[]={3686.9951,118.23868,1230.0631};
 			azimut=130;
-			id=25;
+			id=26;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this";
-			syncId=7;
+			syncId=8;
 			synchronizations[]={1};
 		};
 		class Item6
 		{
 			position[]={3657.625,117.90273,1161.5035};
 			azimut=310;
-			id=26;
+			id=27;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			lock="UNLOCKED";
 			skill=0.60000002;
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;this setvehicleammo 0;this animate [""RocketPods"",1]; this setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""]; this addEventHandler[""Respawn"", {(_this select 0) setvehicleammo 0; (_this select 0) animate [""RocketPods"",1]; (_this select 0) setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""]}];";
-			syncId=8;
-			synchronizations[]={1};
+			text="trans_heli";
+			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;this setvehicleammo 0;this animate [""RocketPods"",1]; this setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""];";
+			syncId=9;
+			synchronizations[]={4};
 		};
 		class Item7
 		{
 			presenceCondition="paramsArray select 2 == 0";
 			position[]={3695.9602,118.16999,1209.4103};
 			azimut=115;
-			id=27;
+			id=28;
 			side="EMPTY";
 			vehicle="uns_medical1";
 			skill=0.60000002;
@@ -691,7 +776,7 @@ class Mission
 			presenceCondition="paramsArray select 2 == 1";
 			position[]={3659.4038,118.12542,1224.8577};
 			azimut=205;
-			id=28;
+			id=29;
 			side="EMPTY";
 			vehicle="ABoxes";
 			leader=1;
@@ -704,7 +789,7 @@ class Mission
 			presenceCondition="paramsArray select 2 == 1";
 			position[]={3661.0474,118.13654,1223.8923};
 			azimut=295;
-			id=29;
+			id=30;
 			side="EMPTY";
 			vehicle="uns_medical1";
 			skill=0.60000002;
@@ -713,7 +798,7 @@ class Mission
 		class Item10
 		{
 			position[]={3684.5403,118.22278,1223.8287};
-			id=30;
+			id=31;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
@@ -724,7 +809,7 @@ class Mission
 		{
 			position[]={3708.6101,140.24483,1236.7205};
 			azimut=160;
-			id=31;
+			id=32;
 			side="EMPTY";
 			vehicle="Land_PortableLight_single_F";
 			skill=0.60000002;
@@ -735,7 +820,7 @@ class Mission
 		{
 			position[]={3659.4038,118.09854,1248.9255};
 			azimut=213.7932;
-			id=32;
+			id=33;
 			side="EMPTY";
 			vehicle="Land_PortableLight_single_F";
 			skill=0.60000002;
@@ -746,7 +831,7 @@ class Mission
 		{
 			position[]={3656.8127,117.90575,1162.1426};
 			offsetY=1.1;
-			id=33;
+			id=34;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_red_F";
 			skill=0.60000002;
@@ -756,7 +841,7 @@ class Mission
 		{
 			position[]={3658.998,118.10194,1244.7799};
 			offsetY=1.4;
-			id=34;
+			id=35;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_red_F";
 			skill=0.60000002;
@@ -767,7 +852,7 @@ class Mission
 		{
 			position[]={3674.0713,118.16297,1200.5526};
 			offsetY=2;
-			id=35;
+			id=36;
 			side="EMPTY";
 			vehicle="Land_FloodLight_F";
 			skill=0.40000001;
@@ -778,7 +863,7 @@ class Mission
 			position[]={3656.7881,118.0848,1245.7448};
 			azimut=150;
 			offsetY=0.82499999;
-			id=36;
+			id=37;
 			side="EMPTY";
 			vehicle="cig_lit";
 			leader=1;
@@ -789,7 +874,7 @@ class Mission
 			position[]={3657.542,118.09184,1245.0573};
 			azimut=125;
 			offsetY=0.029999999;
-			id=37;
+			id=38;
 			side="EMPTY";
 			vehicle="Land_HumanSkull_F";
 			leader=1;
