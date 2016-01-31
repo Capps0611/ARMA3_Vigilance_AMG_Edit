@@ -19,4 +19,18 @@ player createDiaryRecord ["Diary",[
 	format["Enemy is occupying territory one square-kilometer grid in every <marker name='blufor_base'>%1 minutes.</marker> Your mission is to stop their advance.<br/><br/>* Talk to civilians for intel<br/>* Find intel around killed officers<br/>* <marker name='blufor_base'>Search and destroy</marker> enemy weapons cache", 5 * (paramsArray select 1) + 10]
 ]];
 
+player createDiaryRecord ["Diary",[
+	"Change Log",
+	format["v0.26v
+	<br/>-Replaced standard respawn with AMG
+	<br/>-Made base safe zone (No enemy will enter base)
+    <br/>-Removed restriction on arsenal
+    <br/>-Replaced unarmed Wildcat with Armed Wildcat (No Ammo)
+	<br/>
+	<br/>v0.26c
+	<br/>-Removed BI respawn system (for good)
+	<br/>-Fixed Wildcat respawn texture"]
+]];
+
+
 true

@@ -18,7 +18,7 @@ if (isNil "b_pallet_1") then { // Weapon loadouts from Unsung or Arma 3
 	0 = ["AmmoboxInit",[b_pallet,true]] spawn BIS_fnc_arsenal;
 } else {
 	//["AmmoboxInit",[b_pallet_1, false, {true}]] spawn BIS_fnc_arsenal
-	0 = 0 = ["AmmoboxInit",[b_pallet_1,true]] spawn BIS_fnc_arsenal;
+	0 = ["AmmoboxInit",[b_pallet_1,true]] spawn BIS_fnc_arsenal;
 };
 
 private "_trig"; // Base HQ bunker jukebox

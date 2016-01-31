@@ -13,7 +13,7 @@ respawn = 3;
 respawnDelay = 10;
 respawnVehicleDelay = 120;
 respawnOnStart = -1;
-respawnTemplates[] = {"Revive","MenuPosition"};
+respawnTemplates[] = {"MenuPosition"};
 
 corpseManagerMode = 1;
 corpseLimit = 4;

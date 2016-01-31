@@ -53,7 +53,7 @@ class Mission
 	randomSeed=3717433;
 	class Intel
 	{
-		briefingName="Vigilance v0.26 (Capps Edit)";
+		briefingName="Vigilance v0.26c (Capps Edit)";
 		overviewText="Search and destroy the weapons cache";
 		startFog=0.19999999;
 		startWind=0.099999994;
@@ -614,7 +614,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			text="b_pallet";
-			init="this allowDamage false;0 =[""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
+			init="this allowDamage false;";
 		};
 		class Item2
 		{
@@ -671,7 +671,7 @@ class Mission
 			vehicle="I_Heli_light_03_F";
 			lock="UNLOCKED";
 			skill=0.60000002;
-			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;this setvehicleammo 0;this animate [""RocketPods"",1]; this setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""];";
+			init="clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;this setvehicleammo 0;this animate [""RocketPods"",1]; this setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""]; this addEventHandler[""Respawn"", {(_this select 0) setvehicleammo 0; (_this select 0) animate [""RocketPods"",1]; (_this select 0) setObjectTexture[0,""\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa""]}];";
 			syncId=8;
 			synchronizations[]={1};
 		};

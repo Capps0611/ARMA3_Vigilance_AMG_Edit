@@ -27,7 +27,7 @@ waitUntil {!isNull findDisplay 46};
 ["ShowTimer",[]] call VG_fnc_support;
 
 // Enable using ear plugs
-["EarPlugs",[]] call VG_fnc_support;
+//["EarPlugs",[]] call VG_fnc_support;
 
 playMusic "EventTrack02_F_EPA";
 
