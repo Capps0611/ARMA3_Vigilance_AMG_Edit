@@ -29,7 +29,7 @@ class Header
 {
 gameType = Coop;
 minPlayers = 1;
-maxPlayers = 12;
+maxPlayers = 20;
 };
 
 class Params
@@ -105,8 +105,21 @@ class CfgSounds
 		sound[] = {"@a3\dubbing_f_epc\c_m02\102_investigationExplained\c_m02_102_investigationexplained_KER_1.ogg", 0.8, 1};
 		titles[] = {0,"Officer: ""You are already assigned to an operation, read the intel"""};
 	};
+	
 };
+class CfgMusic
+{
+	tracks[]={};
 
+	class eveOfDestruction
+	{
+			// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "eve_of_destruction";
+		// filename, volume, pitch
+		sound[] = {"\Music\Barry_McGuire_-_Eve_Of_Destruction.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+	};
+};
 class CfgNotifications
 {
 	class Vigilance

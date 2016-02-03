@@ -29,7 +29,7 @@ waitUntil {!isNull findDisplay 46};
 // Enable using ear plugs
 //["EarPlugs",[]] call VG_fnc_support;
 
-playMusic "EventTrack02_F_EPA";
+playMusic "eveOfDestruction";//"EventTrack02_F_EPA";
 
 task1 = player createSimpleTask ["t1"];
 task1 setSimpleTaskDescription [
